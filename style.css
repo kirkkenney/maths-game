@@ -1,0 +1,272 @@
+body {
+	max-width: 98vw;
+	max-height: 100vh;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(20,20,20);
+	overflow: hidden;
+}
+#rowOne, #rowTwo {
+	width: 80%;
+	height: 40%;
+	display: block;
+}
+#rowOne {
+	top: 20%;
+	left: 10%;
+	position: absolute;
+	z-index: 10;
+}
+#rowTwo {
+	top: 60%;
+	left: 10%;
+	position: absolute;
+	z-index: 10;
+}
+#addition, #multiplication {
+	float: left;
+	margin-left: -10%;
+}
+#subtraction, #division {
+	float: right;
+	margin-right: -10%;
+}
+.Btn {
+	display: inline-block;
+	color: rgb(20,20,20);
+	background-color: rgb(235,235,235);
+	height: 30%;
+	width: 40%;
+	font-size: 60px;
+	text-align: center;
+	padding: 20px 0;
+	border-radius: 20px;
+	border: solid black 1px;
+	box-shadow: 5px 5px 10px rgb(80,80,80);
+	cursor: pointer;
+}
+
+.Btn:active {
+	transform: translatey(2px);
+	box-shadow: 3px 3px 8px rgb(80,80,80);;
+}
+#scoreDiv {
+	background-color:rgb(235,235,235);
+	color: rgb(20,20,20);
+	box-shadow: 5px 5px 10px rgb(80,80,80);
+	border-radius: 20px;
+	text-align: center;
+	position: absolute;
+	top: 40%;
+	left: 37%;
+	z-index: 10;
+	width: 26%;
+	height: 20%;
+}
+.accScoreText {
+	font-size: 30px;
+	margin-top: 5%;
+}
+#accScore {
+	font-size: 50px;
+}
+.cascade1, .cascade2, .cascade3, .cascade4, .cascade5, .cascade6, .cascade7, .cascade8 {
+	position: absolute;
+	font-size: 30px;
+	color: white;
+	top: -35%;	
+	width: 15%;
+	text-align: center;
+	animation: cascade 2s linear infinite;
+	z-index: 1;
+}
+.cascade1 {
+	left: 0%;
+}
+.cascade2 {
+	left: 12%;
+}
+.cascade3 {
+	left: 24%;
+}
+.cascade4 {
+	left: 36%;
+}
+.cascade5 {
+	left: 48%;
+}
+.cascade6 {
+	left: 60%;
+}
+.cascade7 {
+	left: 72%;
+}
+.cascade8 {
+	left: 84%;
+}
+.cascade {
+	margin: 5% 0;
+}
+@keyframes cascade {
+	0% {
+		top: -40%;
+	}
+	100% {
+		top: 0%;
+	}
+}
+#additionTest, #subtractionTest, #multiplyTest, #divisionTest {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+}
+.additionContainer, .subtractionContainer, .multiplyContainer, .divisionContainer {
+	position: absolute;
+	width: 80%;
+	height: 80%;
+	left: 10%;
+	top: 10%;
+	background-color: rgb(225,225,225);
+}
+.checkAnswer, .nextSlide {
+	font-size: 25px;
+	background-color:rgb(20,20,20);
+	color: rgb(225,225,225);
+	padding: 10px;
+	text-align: center;
+	border: solid white 1px;
+	position: absolute;
+	width: 30%;
+	cursor: pointer;
+}
+.checkAnswer {
+	bottom: 20%;
+	left: 12%;
+}
+.nextSlide {
+	bottom: 20%;
+	right: 12%;
+}
+.additionSlide table, .subtractionSlide table, 
+.multiplySlide table, .divisionSlide table {
+	width: 40%;
+	height: 60%;
+	text-align: center;
+	font-size: 40px;
+	position: absolute;
+	top: 0%;
+	left: 30%;
+}
+.numberOne, .numberTwo, .operator {
+	position: absolute;
+	font-size: 60px;
+	color: rgb(20,20,20);
+	top: 20%;
+}
+.numberOne {
+	left: 15%;
+}
+.numberTwo {
+	right: 15%;
+}
+.operator {
+	left: 45%;
+}
+.additionSlide input[type="number"], .subtractionSlide input[type="number"], 
+.multiplySlide input[type="number"], .divisionSlide input[type="number"] {
+	display: block;
+	font-size: 30px;
+	border: solid black 1px;
+	background-color:rgb(225,225,225);
+	color:rgb(20,20,20);
+	width: 50%;
+	position: absolute;
+	top: 40%;
+	left: 25%;
+	text-align: center;
+	padding: 10px;
+}
+.additionSlide input[type="number"]:focus, .subtractionSlide input[type="number"]:focus, 
+.multiplySlide input[type="number"]:focus, .divisionSlide input[type="number"]:focus {
+	background-color:rgb(20,20,20);
+	color:rgb(225,225,225);
+}
+.messages {
+	width: 100%;
+	text-align: center;
+	font-size: 25px;
+	position: absolute;
+	top: 55%;
+}
+.divDisclaimer {
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	position: absolute;
+	bottom: 5%;
+}
+.divDisclaimer span {
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+}
+#score, #subtractionScore, #multiplyScore, #divisionScore {
+	font-size: 80px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	top: 20%;
+}
+#finalScore, #finalSubtractionScore, #finalMultiplyScore, #finalDivisionScore {
+	position: absolute;
+	width: 80%;
+	height: 80%;
+	left: 10%;
+	top: 10%;
+	background-color: rgb(225,225,225);
+	z-index: 20;
+	display: none;
+}
+.scoreText {
+	width: 100%;
+	text-align: center;
+	font-size: 40px;
+}
+.exit {
+	position: absolute;
+	bottom: 20%;
+	left: 10%;
+	font-size: 30px;
+	width: 30%;
+	background-color:rgb(20,20,20);
+	color: rgb(225,225,225);
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+.restart {
+	position: absolute;
+	bottom: 20%;
+	right: 10%;
+	font-size: 30px;
+	width: 30%;
+	background-color:rgb(20,20,20);
+	color: rgb(225,225,225);
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+.disclaimer {
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	position: absolute;
+	bottom: 0;
+}
+
+
